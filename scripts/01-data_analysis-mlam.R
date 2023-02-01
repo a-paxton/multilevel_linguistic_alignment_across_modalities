@@ -118,16 +118,16 @@ plot_unigram_lexical_alignment = ggplot(turn_df,
                                 "Arg.",
                                 "Coop."),
                      name = "Conversation Type")+
-  theme(legend.position = "bottom") +
+  theme(legend.position = "none") +
   geom_jitter(width=.2,
-              alpha=.3) + 
+              alpha=.1) + 
   xlab("Conversation type")  +
   ylab("Log Unigram Lexical Alignment") +
-  ggtitle("Lexical unigram alignment\nby condition and conversation type")
+  ggtitle("Lexical unigram alignment by\ncondition and conversation type")
 ggsave(filename = paste0('./figures/plot_unigram_lexical_alignment-mlam.png'),
        plot = plot_unigram_lexical_alignment,
-       height = 6,
-       width = 4,
+       height = 4,
+       width = 3.05,
        units = "in")
 
 ##### 3. Bigram lexical alignment #####
