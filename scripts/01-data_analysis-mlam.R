@@ -69,13 +69,13 @@ turn_df = turn_df %>% ungroup() %>%
   
   # recode for analyses
   mutate(conv_type = factor(conv_type, 
-                            labels = c("Affiliative", 
-                                       "Argumentative", 
-                                       "Cooperative"))) %>%
+                            labels = c("Aff.", 
+                                       "Arg.", 
+                                       "Coop."))) %>%
   mutate(condition = factor(condition, 
-                            labels = c("FtF Laboratory", 
+                            labels = c("FF Lab", 
                                        "VC Remote", 
-                                       "VC Laboratory"))) %>%
+                                       "VC Lab"))) %>%
   mutate(condition = as.factor(condition),
          conv_type = as.factor(conv_type),
          dyad = as.factor(dyad))
